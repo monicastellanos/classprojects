@@ -1,0 +1,163 @@
+a.top {
+    color: black;
+    border-style: solid;
+    font-size: 16px;
+    padding-top: 7px;
+    padding-left: 20px;
+    padding-bottom: 7px;
+    padding-right: 20px;
+    margin-left: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    
+}
+a:link{
+    text-decoration: none;
+}
+
+a.top:hover{
+    color: white;
+    background-color: black;
+    border-color: black;
+    
+}
+
+a.bottom{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+   
+}
+
+a.bottom:hover{
+    color: rgb(158,132,106);
+}
+
+h1{
+    color: white;
+    background-image: url("header.png");
+    background-position: center;
+    height: 230px;
+    background-size: cover;
+    text-align: center;
+    font-size: 66px;
+    background-color: rgb(38,38,38);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding-top: 120px;
+    
+}
+
+p{
+   text-align: justify; 
+   font-size: 15px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   margin: 10px;
+   padding-left: 40px;
+   padding-right: 40px;
+
+}
+
+h2{
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    
+}
+
+h2 + p{
+    text-align: center;
+    font-size: 18px;
+}
+
+h3{
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding-left: 19px;
+}
+
+#cap{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+div{
+    background-color: rgb(234,209,184);
+
+}
+
+figcaption{
+    font-size: 14px;
+    text-align: center;
+}
+
+.font{
+   background-color: rgb(201,201,201); 
+   font-family: 'Source Code Pro', monospace;
+
+}
+
+.strong{
+    font-weight: bold;
+}
+
+body{
+    background-color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 1180px;
+
+}
+
+html{
+    background-color: rgb(158,132,106);
+    width: 1100px;
+}
+
+img{
+    width: 90%;
+    padding-left: 40px;
+}
+
+img + figcaption{
+    text-align: left;
+    font-size: 13px;
+    padding-left: 50px;
+    
+}
+figcaption{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
+
+div{
+    font-size: 14px;
+    font-family: 'Source Code Pro', monospace;
+    margin: 20px;
+    padding: 20px;
+}
+
+ul{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height : 30px;
+    padding-left: 80px;
+}
+
+hr{
+    border-width: 1px;
+    border-color: black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+

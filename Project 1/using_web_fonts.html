@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Using Webfonts</title>
+        <link rel="stylesheet" href="using_web_fonts.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+          </style>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+          </style>
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap');
+          </style>
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+          </style>
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+          </style>
+    </head>
+    <body>
+        <br/>
+        <a class="top" href="#">Articles</a>
+        <a class="top" href="#">Events</a> 
+        <a class="top" href="#">Topics</a>
+        <a class="top" href="#">Write For Us</a>
+        <figure>
+            <!-- Aqui va una imagen de fondo-->
+            <h1>Using Webfonts</h1>
+        <figcaption>by <strong>Bram Stein · October 03, 2017</strong> <br/> Published in Typography & Web Fonts</figcaption> 
+        </figure>
+        <h2>A Quick User's Guide</h2>
+        <p id="cap">
+            Now that you've selected a font, let's put it on your website. Webfonts are
+            defined in CSS through the <span class="font">@font-face</span> rule. If you're a web developer, you've
+            most likely written, copied and pasted, or at the very least seen an <span class="font"> @font-face</span>
+            rule. For the sake of completeness, though, let's quickly run through a basic
+            example:
+        </p>
+        <div><!-- añadir sangría y enter-->
+            &nbsp; @font-face {<br/>
+            &nbsp; &nbsp; font-family: Elena;<br/>
+            &nbsp; &nbsp; src: url(elena-regular.woff);<br/>
+            &nbsp; }
+        </div>
+       <p>
+        This creates a new webfont family that can be referenced through the font-family or
+        font shorthand property. But something's missing here. When referencing a webfont
+        in a font stack, always make sure to include at least one fallback font in case the
+        webfont fails to load. Here, if Elena fails to load, the browser will fall back on the
+        generic serif font family:
+       </p> 
+        <div>
+            &nbsp; p {<br/>
+            &nbsp;&nbsp; font-family: Elena, serif;<br/>
+            &nbsp; }
+        </div>
+        <p>
+            We'll talk more about fallback fonts and how they can be used to make your site
+            appear to load faster in Chapter 3. For now, let's keep our fallback stack simple
+            by including only the generic serif and sans-serif font families.
+        </p>
+        <h3>|&nbsp;&nbsp; Font Families</h3>
+        <p>
+            Creating a font family with multiple styles is accomplished by creating an <span class="font">@font-face</span> 
+            rule for each style and using the same <span class="font">font-family</span> name. 
+            The following <span class="font">@font-face</span> rules create a family with a normal and bold style:
+        </p>
+        <div>
+            &nbsp; @font-face {<br/>
+                &nbsp; &nbsp;font-family: Elena;<br/>
+                &nbsp; &nbsp;src: url(elena-regular.woff);<br/>
+                &nbsp; &nbsp;font-weight: normal;<br/>
+            &nbsp; }<br/>
+            <br/>
+            &nbsp; @font-face {<br/>
+                &nbsp; &nbsp; font-family: Elena;<br/>
+                &nbsp; &nbsp; src: url(elena-bold.woff);<br/>
+                &nbsp; &nbsp; font-weight: bold;<br/>
+            &nbsp; }
+        </div>
+        <p>
+            You can use this font family in your <strong>CSS</strong> by referencing the family name and
+            weight in your selectors. This applies the regular style to paragraphs and the
+            bold style to <span class="font">strong</span> paragraphs:
+        </p>
+       <div>
+            &nbsp; p { <br/>
+                &nbsp; &nbsp; font-family: Elena, serif;<br/>
+            &nbsp; }<br/>
+            <br/>
+            &nbsp; p strong {<br/>
+                &nbsp; &nbsp; font-weight: bold;<br/>
+            &nbsp; }<br/>
+       </div>
+       <h3>|&nbsp;&nbsp; Font Formats</h3> 
+       <p>
+        The <span class="font">src</span> descriptor tells a browser where to get a font file. The previous
+        examples used a single font format, but you'll often see <span class="strong">URLs</span> to multiple font
+        formats combined with format hints, which are appended after the <span class="strong">URL</span> using the
+        <span class="font">format("value")</span> syntax. Format hints tell the browser what the format of the font
+        file at a given <span class="strong">URL</span> is.
+       </p> 
+        <div>
+            &nbsp; @font-face {<br/>
+                &nbsp;&nbsp; font-family: Elena;<br/>
+                &nbsp;&nbsp; src: url(elena-regular.woff2) format("woff2"),<br/>
+                &nbsp;&nbsp; url(elena-regular.woff) format("woff");<br/>
+                <br/>
+            &nbsp; }<br/>
+        </div>
+        <p>
+            If you list multiple formats, modern browsers will pick the first format they
+            support based on the format hint. Therefore, it's important to list webfont
+            formats in the order of best compression to least. Even though format hints are
+            optional, always include them—they let the browser know about the format without
+            needing to download the font. For example, if a browser does not support WOFF2,
+            but does support WOFF, it can skip the WOFF2 font file based on the format hint.    
+        </p>
+       
+        <p>
+            Browsers support several webfont formats: OpenType (TrueType), EOT, WOFF, and
+            WOFF2. Some browsers also support SVG fonts, but they're deprecated and should no
+            longer be used (and should not be confused with the new OpenType-SVG format).
+            EOT, WOFF, and WOFF2 are technically not font formats. They are compressed
+            OpenType files with varying degrees of compression. WOFF2 offers the best
+            compression, followed by WOFF and EOT (Fig 1).
+        </p>
+        <figure><!-- añadir tabla-->
+            <img src="fig-1.png">
+            <figcaption>
+                Fig 1: Browser support for font formats at the time of writing. Look for up-to-
+                date and version-specific browser support for font formats at caniuse.com.
+            </figcaption> 
+        </figure>
+        <p>
+            In researching coverage for all browsers, you may have come across something
+            called the bulletproof @font-face syntax by Fontspring. The bulletproof syntax
+            uses:
+        </p>
+       <ul>
+        <li class="strong">EOT</li>
+        <li class="strong">WOFF2</li>
+        <li class="strong">WOFF</li>
+        <li>Raw OpenType, and</li>
+        <li><span class="strong">SVG</span> font files for maximum browser coverage</li>
+       </ul>
+       <p>
+            But is the bulletproof syntax still relevant? No. In fact, I think it’s harmful.
+            SVG fonts are deprecated and only supported by browsers that are no longer in
+            use.
+       </p>
+        <p>
+            Because most websites no longer support old browsers, I highly recommend using a
+            simplified syntax. This simplified syntax covers all modern browsers, as well as
+            slightly older ones that are still in active use, such as Android 4.4 and
+            earlier:
+        </p>
+        <div>
+            &nbsp; @font-face {<br/>
+                &nbsp;&nbsp; font-family: Elena;<br/>
+                &nbsp;&nbsp; src: url(elena.woff2) format("woff2"),<br/>
+                &nbsp;&nbsp;&nbsp; url(elena.woff) format("woff"),<br/>
+                &nbsp;&nbsp;&nbsp; url(elena.otf) format("opentype");<br/>
+            &nbsp; }<br/>
+        </div>
+        <hr>
+        <a class="bottom" href="#">Permissions & Copyright</a>
+        <a class="bottom" href="#">Privacy Policy</a>
+        <a class="bottom" href="#">Fonts by Webtype</a>
+        <br/>
+        <br/>
+    </body>
+</html>

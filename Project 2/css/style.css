@@ -1,0 +1,178 @@
+html{
+    background-color: white;
+}
+.body{
+    background-color: #FBFBFB;
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 1200px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.7em;
+   
+}
+
+pre{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+h1, h2, h3 {
+    color: #2C8E99;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    padding: 20px;
+    background: radial-gradient(circle, #FBFBFB 10%, #B7E5EB 80%);
+}
+
+.black{
+    color: black;
+}
+.container{
+    text-align: center;
+}
+
+a.top{
+    color: #FBFBFB;
+    background-color:#2C8E99;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+a.top:hover{
+    background-color: #FBFBFB;
+    color: #2C8E99;
+}
+
+a.top:link, a.top:visited, a.top:active {
+    text-decoration:none;
+}
+
+a.bottom{
+    color: #FBFBFB;
+}
+
+li.top{
+    list-style: none;
+    display: inline-block;
+    
+}
+
+figcaption{
+    padding-bottom: 15px;
+    font-style: italic;
+}
+
+.quote {
+    border-top: #2C8E99;
+    border-bottom: #2C8E99;
+    border-style: solid;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#author{
+    color: #E63946;
+    text-decoration: underline dashed;
+
+}
+
+abbr{
+    text-decoration: underline dotted;
+}
+
+p.bottom{
+    color: #FBFBFB;
+    background-color:#2C8E99;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.mark{
+    background-color: white;
+    font-style: italic;
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+}
+
+ol.latin{
+    list-style: lower-alpha;
+}
+
+ul.image{
+    list-style-image: url(../img/libro.png);
+    margin-left: 4em;
+    
+}
+
+ol.roman{
+    list-style: upper-roman;
+}
+
+img{
+    width: 52%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
+    margin-top: 2em;
+}
+
+.center{
+    text-align: center;
+    
+}
+
+.comet{
+    font-size: 3em;
+    font-weight: bold;
+    color: #2C8E99;
+}
+
+.measures{
+    text-align: justify;
+    border-left: #2C8E99;
+    border-style: solid;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    padding-left: 10px;
+}
+
+.references{
+    color: #2C8E99;
+    font-weight: bold;
+}
+
+.left{
+    margin-left: 3em;
+    margin-bottom: 2em;
+}
+
